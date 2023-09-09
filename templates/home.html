@@ -1,0 +1,46 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Details</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+    <table class="table">
+        <thead class="head">
+            <th>ID</th>
+            <th>Name</th>
+            <th>age</th>
+            <th>course</th>
+            <th>passed_out_year</th>
+            <th>insitute_name</th>
+            <th>email</th>
+            <th>mobile_No</th>
+            <th>Options</th>
+        </thead>
+        <tbody class="body">
+            {% for i in form %}
+            <tr>
+                <td>{{i.id}}</td>
+                <td>{{i.student_name}}</td>
+                <td>{{i.age}}</td>
+                <td>{{i.course}}</td>
+                <td>{{i.passed_out_year}}</td>
+                <td>{{i.insitute_name}}</td>
+                <td>{{i.email}}</td>
+                <td>{{i.mobile_No}}</td>
+                <td>
+                    <button class="btn"><a href="{% url "update" i.id %}">Edit</a></button>
+                    <button class="btn"><a href="{% url "delete" i.id %}">Delete</a></button>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <div class="cointainer">
+        <button class="tbl-btn"type="submit"><a href="{% url "add" %}">Add New Record</a></button></body>
+    </div>
+</body>
+</html>

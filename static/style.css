@@ -1,0 +1,37 @@
+
+.table{
+    background-color: black;
+    margin: 0 auto;
+}
+.head{
+    background-color: grey;
+}
+.body{
+    background-color: lightgrey;
+}
+.cointainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+}
+.btn a{
+    text-decoration: none;
+
+}
+.tbl-btn a{
+    text-decoration: none;
+}
+
+.add h1{
+    text-align: center;
+}
+.add form{
+    text-align: center;
+}
+.update h1{
+    text-align: center;
+}
+.update form{
+    text-align: center;
+}
